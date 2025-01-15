@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALDA PORTOFOLIO</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        div {
+            width: 420px;
+            height: 300px;
+            margin: auto;
+        }
+
+        .container {
+            height: 600px;
+            background-image: url(img/background.png);
+            background-size: 450px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .people img {
+            height: 350px;
+            width: 400;
+            margin-top: -110px;
+            float: left;
+        }
+
+        .people img:hover {
+            content: url('img/orang_hov.png');
+            /* Gambar saat dihover */
+        }
+
+        .komputer img {
+            height: 100px;
+            margin-top: -10px;
+            margin-left: 95px;
+        }
+
+        .komputer img:hover {
+            content: url('img/komputer_hov.png');
+            /* Gambar saat dihover */
+        }
+
+        .project img {
+            width: 65px;
+            margin-top: 85px;
+        }
+
+        .project img:hover {
+            outline: 2px solid #FFEB3B;
+        }
+
+        .chat-bubble {
+            background-color: #e0e0e0;
+            padding: 5px;
+            border-radius: 10px;
+            margin-left: 160px;
+            width: 80px;
+            height: 50px;
+        }
+
+        .chat-bubble:hover {
+            outline: 2px solid #FFEB3B;
+        }
+
+        .chat-bubble p {
+            font-size: 10px;
+        }
+
+        #typing-text {
+            border-right: 0.15em orange;
+            white-space: nowrap;
+            margin: 0;
+            letter-spacing: 0.15em;
+            animation: typing 3s steps(20) infinite;
+        }
+
+        /* popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-40%, -40%);
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .popup img {
+            max-width: 100%;
+            max-height: 80vh;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .sosmed {
+            display: flex;
+            margin-top: 20px;
+            flex-direction: column;
+
+        }
+
+        /* .sosmed .logo {
+            display: flex;
+            justify-content: space-evenly;
+        } */
+
+        .sosmed img {
+            margin-top: 40px;
+            width: 60px;
+            float: left;
+            margin: 10px;
+        }
+
+        .sosmed img:hover {
+            width: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="project">
+            <a href="#" onclick="showImage('img/experience.png')">
+                <img src="img/bingkai.png" alt="">
+            </a>
+        </div>
+        <a href="#" id="social-link">
+            <div class="chat-bubble">
+                <h5 id="typing-text"></h5>
+                <p>this is <b>Mohamad Alda's</b> Portofolio</p>
+            </div>
+        </a>
+
+        <div class="people">
+            <a href="#" onclick="showImage('img/about.png')">
+                <img src="img/orang.png" alt="">
+            </a>
+
+            <div class="komputer">
+                <a href="#" onclick="showImage('img/project.png')">
+                    <img src="img/komputer.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="image-popup" class="popup">
+        <span class="close" onclick="closeImagePopup()">&times;</span>
+        <img id="popup-image" src="" alt="Popup Image">
+    </div>
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div class="sosmed">
+            <h3>Contact Me:</h3>
+            <div class="logo">
+                <a href="https://wa.me/6285814404967" target="_blank"><img src="img/wa.webp" alt="WhatsApp"></a>
+                <a href="https://www.linkedin.com/in/mohamadalda" target="_blank"><img src="img/linkedin.png"
+                        alt="LinkedIn"></a>
+                <a href="https://github.com/Muhmmadalda69" target="_blank"><img src="img/github.png" alt="Github"></a>
+            </div>
+            <p><i>"Let's Connect"</i></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
